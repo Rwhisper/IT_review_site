@@ -1,0 +1,48 @@
+create table spring_project_board(
+B_no number(5) primary key,
+B_name varchar2(20),
+B_subject varchar2(50),
+B_content varchar2(500),
+B_id varchar2(20),
+B_date date default sysdate );
+
+create sequence spring_project_boardseq;
+
+create table spring_project_hardware(
+H_no number(5) primary key,
+H_subject varchar2(50),
+H_name varchar2(20),
+H_code varchar2(20),
+H_count number(5),
+H_content varchar2(500),
+H_id varchar2(20),
+H_price varchar2(20),
+H_score varchar2(5),
+H_suggest number(5),
+H_time date default sysdate
+);
+
+create table spring_project_software(
+S_no number(5) primary key,
+S_subject varchar2(50),
+S_name varchar2(20),
+S_code varchar2(20),
+S_count number(5),
+S_content varchar2(500),
+S_id varchar2(20),
+S_price varchar2(20),
+S_score varchar2(5),
+S_suggest number(5),
+S_time date default sysdate
+);
+
+create sequence spring_project_hardwareseq;
+create sequence spring_project_softwareseq;
+
+create table spring_project_user(
+user_id varchar2(20) primary key,
+user_pwd varchar2(30),
+user_name varchar2(20),
+user_email varchar(50),
+user_phone varchar(20)
+);
